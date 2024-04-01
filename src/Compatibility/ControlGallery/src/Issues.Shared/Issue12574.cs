@@ -93,7 +93,7 @@ namespace Microsoft.Maui.Controls.ControlGallery.Issues
 		}
 
 #if UITEST
-		[PortTest]
+		[MovedToAppium]
 		[Test]
 		[Compatibility.UITests.FailsOnMauiIOS]
 		[Compatibility.UITests.FailsOnMauiAndroid]
@@ -122,7 +122,7 @@ namespace Microsoft.Maui.Controls.ControlGallery.Issues
 			RunningApp.WaitForElement("0 item");
 		}
 
-		[PortTest]
+		[MovedToAppium]
 		[Test]
 		[Compatibility.UITests.FailsOnMauiIOS]
 		public void RemoveItemsQuickly()

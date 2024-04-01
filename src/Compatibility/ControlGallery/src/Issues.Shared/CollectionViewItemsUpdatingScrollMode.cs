@@ -28,7 +28,7 @@ namespace Microsoft.Maui.Controls.ControlGallery.Issues
 		}
 
 #if UITEST
-		[PortTest]
+		[MovedToAppium]
 		[Test]
 		public void KeepItemsInView()
 		{

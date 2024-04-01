@@ -64,7 +64,7 @@ namespace Microsoft.Maui.Controls.ControlGallery.Issues
 #endif
 
 #if UITEST
-		[PortTest]
+		[MovedToAppium]
 		[Test]
 		[Compatibility.UITests.FailsOnMauiIOS]
 		public void CarouselViewPositionFromVisibilityChangeTest()
