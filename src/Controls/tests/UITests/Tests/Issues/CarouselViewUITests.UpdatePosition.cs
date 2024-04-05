@@ -15,9 +15,9 @@ namespace Microsoft.Maui.AppiumTests.Issues
 
 		// Issue11224 (src\ControlGallery\src\Issues.Shared\Issue11224.cs
 		[Test]
-		[IgnoreOnIOS("Android specific Test")]
-		[IgnoreOnMac("Android specific Test")]
-		[IgnoreOnWindows("Android specific Test")]
+		[FailsOnIOS("Android specific Test")]
+		[FailsOnMac("Android specific Test")]
+		[FailsOnWindows("Android specific Test")]
 		public void CarouselViewPositionFromVisibilityChangeTest()
 		{
 			App.WaitForElement("AppearButton");

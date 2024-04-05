@@ -21,8 +21,8 @@ namespace Microsoft.Maui.AppiumTests
 
 		// KeepScrollOffset (src\Compatibility\ControlGallery\src\Issues.Shared\CollectionViewItemsUpdatingScrollMode.cs)
 		[Test]
-		[IgnoreOnIOS]
-		[IgnoreOnMac]
+		[FailsOnIOS]
+		[FailsOnMac]
 		public void KeepItemsInView()
 		{
 			App.WaitForElement("ScrollToMiddle");
@@ -39,7 +39,7 @@ namespace Microsoft.Maui.AppiumTests
 
 		// KeepScrollOffset (src\Compatibility\ControlGallery\src\Issues.Shared\CollectionViewItemsUpdatingScrollMode.cs)
 		[Test]
-		[IgnoreOnAllPlatforms]
+		[FailsOnAllPlatforms]
 		public void KeepScrollOffset()
 		{
 			App.WaitForElement("SelectScrollMode");
@@ -55,7 +55,7 @@ namespace Microsoft.Maui.AppiumTests
 
 		// KeepLastItemInView(src\Compatibility\ControlGallery\src\Issues.Shared\CollectionViewItemsUpdatingScrollMode.cs)
 		[Test]
-		[IgnoreOnAllPlatforms]
+		[FailsOnAllPlatforms]
 		public void KeepLastItemInView()
 		{
 			App.WaitForElement("SelectScrollMode");

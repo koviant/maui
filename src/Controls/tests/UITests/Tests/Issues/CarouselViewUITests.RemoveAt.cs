@@ -15,10 +15,10 @@ namespace Microsoft.Maui.AppiumTests.Issues
 
 		// Issue10300 (src\ControlGallery\src\Issues.Shared\Issue10300.cs
 		[Test]
-		[IgnoreOnAndroid("iOS specific Test")]
-		[IgnoreOnIOS("Currently fails on iOS; see https://github.com/dotnet/maui/issues/19488")]
-		[IgnoreOnMac("iOS specific Test")]
-		[IgnoreOnWindows("iOS specific Test")]
+		[FailsOnAndroid("iOS specific Test")]
+		[FailsOnIOS("Currently fails on iOS; see https://github.com/dotnet/maui/issues/19488")]
+		[FailsOnMac("iOS specific Test")]
+		[FailsOnWindows("iOS specific Test")]
 		public void Issue10300Test()
 		{
 			App.Click("Add");

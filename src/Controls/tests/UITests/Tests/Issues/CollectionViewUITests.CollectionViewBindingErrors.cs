@@ -15,8 +15,8 @@ namespace Microsoft.Maui.AppiumTests
 
 		// CollectionViewBindingErrorsShouldBeZero (src\Compatibility\ControlGallery\src\Issues.Shared\CollectionViewBindingErrors.xaml.cs)
 		[Test]
-		[IgnoreOnMac]
-		[IgnoreOnWindows]
+		[FailsOnMac]
+		[FailsOnWindows]
 		public void NoBindingErrors()
 		{
 			App.WaitForElement("WaitForStubControl");

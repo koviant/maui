@@ -15,9 +15,9 @@ namespace Microsoft.Maui.AppiumTests.Issues
 
 		// Issue9827 (src\ControlGallery\src\Issues.Shared\Issue9827.cs
 		[Test]
-		[IgnoreOnIOS("Android specific Test")]
-		[IgnoreOnMac("Android specific Test")]
-		[IgnoreOnWindows("Android specific Test")]
+		[FailsOnIOS("Android specific Test")]
+		[FailsOnMac("Android specific Test")]
+		[FailsOnWindows("Android specific Test")]
 		public void Issue9827Test()
 		{
 			App.WaitForNoElement("Pos:0");

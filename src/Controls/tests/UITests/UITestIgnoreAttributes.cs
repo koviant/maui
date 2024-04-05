@@ -2,99 +2,99 @@
 
 namespace Microsoft.Maui.AppiumTests
 {
-	public class IgnoreOnAllPlatforms : IgnoreAttribute
+	public class FailsOnAllPlatforms : IgnoreAttribute
 	{
-		public IgnoreOnAllPlatforms() : base(nameof(IgnoreOnAndroid))
+		public FailsOnAllPlatforms() : base(nameof(FailsOnAndroid))
 		{
 		}
-		public IgnoreOnAllPlatforms(string reason) : base(reason)
+		public FailsOnAllPlatforms(string reason) : base(reason)
 		{
 		}
 	}
 
 #if ANDROID
-	public class IgnoreOnAndroid : IgnoreAttribute
+	public class FailsOnAndroid : IgnoreAttribute
 	{
-		public IgnoreOnAndroid() : base(nameof(IgnoreOnAndroid))
+		public FailsOnAndroid() : base(nameof(FailsOnAndroid))
 		{
 		}
-		public IgnoreOnAndroid(string reason) : base(reason)
+		public FailsOnAndroid(string reason) : base(reason)
 		{
 		}
 	}
 #else
-	public class IgnoreOnAndroid : CategoryAttribute
+	public class FailsOnAndroid : CategoryAttribute
 	{
-		public IgnoreOnAndroid() : base(nameof(IgnoreOnAndroid))
+		public FailsOnAndroid() : base(nameof(FailsOnAndroid))
 		{
 		}
-		public IgnoreOnAndroid(string name) : base(name)
+		public FailsOnAndroid(string name) : base(name)
 		{
 		}
 	}
 #endif
 
 #if IOS
-	public class IgnoreOnIOS : IgnoreAttribute
+	public class FailsOnIOS : IgnoreAttribute
 	{
-		public IgnoreOnIOS() : base(nameof(IgnoreOnIOS))
+		public FailsOnIOS() : base(nameof(FailsOnIOS))
 		{
 		}
-		public IgnoreOnIOS(string reason) : base(reason)
+		public FailsOnIOS(string reason) : base(reason)
 		{
 		}
 	}
 #else
-	public class IgnoreOnIOS : CategoryAttribute
+	public class FailsOnIOS : CategoryAttribute
 	{
-		public IgnoreOnIOS() : base(nameof(IgnoreOnIOS))
+		public FailsOnIOS() : base(nameof(FailsOnIOS))
 		{
 		}
-		public IgnoreOnIOS(string name) : base(name)
+		public FailsOnIOS(string name) : base(name)
 		{
 		}
 	}
 #endif
 
 #if MACCATALYST
-	public class IgnoreOnMac : IgnoreAttribute
+	public class FailsOnMac : IgnoreAttribute
 	{
-		public IgnoreOnMac() : base(nameof(IgnoreOnMac))
+		public FailsOnMac() : base(nameof(FailsOnMac))
 		{
 		}
-		public IgnoreOnMac(string reason) : base(reason)
+		public FailsOnMac(string reason) : base(reason)
 		{
 		}
 	}
 #else
-	public class IgnoreOnMac : CategoryAttribute
+	public class FailsOnMac : CategoryAttribute
 	{
-		public IgnoreOnMac() : base(nameof(IgnoreOnMac))
+		public FailsOnMac() : base(nameof(FailsOnMac))
 		{
 		}
-		public IgnoreOnMac(string name) : base(name)
+		public FailsOnMac(string name) : base(name)
 		{
 		}
 	}
 #endif
 
 #if WINDOWS
-	public class IgnoreOnWindows : IgnoreAttribute
+	public class FailsOnWindows : IgnoreAttribute
 	{
-		public IgnoreOnWindows() : base(nameof(IgnoreOnWindows))
+		public FailsOnWindows() : base(nameof(FailsOnWindows))
 		{
 		}
-		public IgnoreOnWindows(string reason) : base(reason)
+		public FailsOnWindows(string reason) : base(reason)
 		{
 		}
 	}
 #else
-	public class IgnoreOnWindows : CategoryAttribute
+	public class FailsOnWindows : CategoryAttribute
 	{
-		public IgnoreOnWindows() : base(nameof(IgnoreOnWindows))
+		public FailsOnWindows() : base(nameof(FailsOnWindows))
 		{
 		}
-		public IgnoreOnWindows(string name) : base(name)
+		public FailsOnWindows(string name) : base(name)
 		{
 		}
 	}

@@ -27,9 +27,9 @@ namespace Microsoft.Maui.AppiumTests
 
 		[Test]
 		[Category(UITestCategories.CarouselView)]
-		[IgnoreOnIOS("For now, running this test only on Android.")]
-		[IgnoreOnMac("For now, running this test only on Android.")]
-		[IgnoreOnWindows("For now, running this test only on Android.")]
+		[FailsOnIOS("For now, running this test only on Android.")]
+		[FailsOnMac("For now, running this test only on Android.")]
+		[FailsOnWindows("For now, running this test only on Android.")]
 		public async Task CarouselViewSetPosition()
 		{
 			App.WaitForElement("lblPosition");
@@ -40,9 +40,9 @@ namespace Microsoft.Maui.AppiumTests
 
 		[Test]
 		[Category(UITestCategories.CarouselView)]
-		[IgnoreOnIOS("For now, running this test only on Android.")]
-		[IgnoreOnMac("For now, running this test only on Android.")]
-		[IgnoreOnWindows("For now, running this test only on Android.")]
+		[FailsOnIOS("For now, running this test only on Android.")]
+		[FailsOnMac("For now, running this test only on Android.")]
+		[FailsOnWindows("For now, running this test only on Android.")]
 		public void CarouselViewGoToNextCurrentItem()
 		{
 			int indexToTest = 3;

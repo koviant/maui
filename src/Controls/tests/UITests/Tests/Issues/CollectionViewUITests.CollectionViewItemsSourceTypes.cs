@@ -15,9 +15,9 @@ namespace Microsoft.Maui.AppiumTests
 
 		// CollectionViewItemsSourceTypesDisplayAndDontCrash (src\Compatibility\ControlGallery\src\Issues.Shared\CollectionViewItemsSourceTypes.cs)
 		[Test]
-		[IgnoreOnIOS("This test is failing, requires research.")]
-		[IgnoreOnMac("This test is failing, requires research.")]
-		[IgnoreOnWindows]
+		[FailsOnIOS("This test is failing, requires research.")]
+		[FailsOnMac("This test is failing, requires research.")]
+		[FailsOnWindows]
 		public void CollectionViewItemsSourceTypesDisplayAndDontCrash()
 		{
 			App.WaitForNoElement("900");

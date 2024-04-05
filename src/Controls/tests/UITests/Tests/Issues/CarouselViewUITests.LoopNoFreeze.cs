@@ -19,10 +19,10 @@ namespace Microsoft.Maui.AppiumTests.Issues
 
 		// Issue12574 (src\ControlGallery\src\Issues.Shared\Issue12574.cs
 		[Test]
-		[IgnoreOnAndroid("iOS specific Test")]
-		[IgnoreOnIOS("Currently fails on iOS; see https://github.com/dotnet/maui/issues/19488")]
-		[IgnoreOnMac("iOS specific Test")]
-		[IgnoreOnWindows("iOS specific Test")]
+		[FailsOnAndroid("iOS specific Test")]
+		[FailsOnIOS("Currently fails on iOS; see https://github.com/dotnet/maui/issues/19488")]
+		[FailsOnMac("iOS specific Test")]
+		[FailsOnWindows("iOS specific Test")]
 		public void Issue12574Test()
 		{
 			App.WaitForNoElement("0 item");

@@ -17,8 +17,8 @@ namespace Microsoft.Maui.AppiumTests.Issues
 
 		// Issue12193 (src\ControlGallery\src\Issues.Shared\Issue12193.cs
 		[Test]
-		[IgnoreOnMac]
-		[IgnoreOnWindows]
+		[FailsOnMac]
+		[FailsOnWindows]
 		public async Task RotatingCarouselViewHTMLShouldNotDisappear()
 		{
 			int delay = 3000;

@@ -17,9 +17,9 @@ namespace Microsoft.Maui.AppiumTests.Issues
 
 		// CollectionShouldInvalidateOnVisibilityChange (src\Compatibility\ControlGallery\src\Issues.Shared\Issue13203.cs)
 		[Test]
-		[IgnoreOnIOS("This test is failing, requires research.")]
-		[IgnoreOnMac("This test is failing, requires research.")]
-		[IgnoreOnWindows]
+		[FailsOnIOS("This test is failing, requires research.")]
+		[FailsOnMac("This test is failing, requires research.")]
+		[FailsOnWindows]
 		public void CollectionShouldInvalidateOnVisibilityChange()
 		{
 			App.WaitForNoElement(Success);
