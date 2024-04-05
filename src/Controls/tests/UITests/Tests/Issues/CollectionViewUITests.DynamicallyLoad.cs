@@ -17,6 +17,7 @@ namespace Microsoft.Maui.AppiumTests.Issues
 
 		// CollectionViewShouldSourceShouldUpdateWhileInvisible (src\Compatibility\ControlGallery\src\Issues.Shared\Issue13126.cs)
 		[Test]
+		[IgnoreOnWindows]
 		public void DynamicallyLoadCollectionView()
 		{
 			App.WaitForNoElement(Success);

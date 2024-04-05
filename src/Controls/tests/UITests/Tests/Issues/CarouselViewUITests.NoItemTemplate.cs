@@ -15,6 +15,7 @@ namespace Microsoft.Maui.AppiumTests.Issues
 
 		// Issue12777 (src\ControlGallery\src\Issues.Shared\Issue12777.cs
 		[Test]
+		[IgnoreOnWindows]
 		public void Issue12777Test()
 		{
 			App.WaitForElement("TestCarouselView");

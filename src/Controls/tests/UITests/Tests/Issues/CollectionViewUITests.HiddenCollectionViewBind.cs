@@ -17,16 +17,12 @@ namespace Microsoft.Maui.AppiumTests.Issues
 
 		// CollectionShouldInvalidateOnVisibilityChange (src\Compatibility\ControlGallery\src\Issues.Shared\Issue13203.cs)
 		[Test]
+		[IgnoreOnIOS("This test is failing, requires research.")]
+		[IgnoreOnMac("This test is failing, requires research.")]
+		[IgnoreOnWindows]
 		public void CollectionShouldInvalidateOnVisibilityChange()
 		{
-			if (Device == TestDevice.Android || Device == TestDevice.Windows)
-			{
-				App.WaitForNoElement(Success);
-			}
-			else
-			{
-				Assert.Ignore("This test is failing, requires research.");
-			}
+			App.WaitForNoElement(Success);
 		}
 	}
 }

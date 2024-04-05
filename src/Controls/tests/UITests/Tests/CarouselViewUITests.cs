@@ -27,44 +27,36 @@ namespace Microsoft.Maui.AppiumTests
 
 		[Test]
 		[Category(UITestCategories.CarouselView)]
+		[IgnoreOnIOS("For now, running this test only on Android.")]
+		[IgnoreOnMac("For now, running this test only on Android.")]
+		[IgnoreOnWindows("For now, running this test only on Android.")]
 		public async Task CarouselViewSetPosition()
 		{
-			if (Device != TestDevice.Android)
-			{
-				Assert.Ignore("For now, running this test only on Android.");
-			}
-			else
-			{
-				App.WaitForElement("lblPosition");
-				await Task.Delay(1000);
-				var result = App.FindElement("lblPosition").GetText();
-				Assert.AreEqual("3", result);
-			}
+			App.WaitForElement("lblPosition");
+			await Task.Delay(1000);
+			var result = App.FindElement("lblPosition").GetText();
+			Assert.AreEqual("3", result);
 		}
 
 		[Test]
 		[Category(UITestCategories.CarouselView)]
+		[IgnoreOnIOS("For now, running this test only on Android.")]
+		[IgnoreOnMac("For now, running this test only on Android.")]
+		[IgnoreOnWindows("For now, running this test only on Android.")]
 		public void CarouselViewGoToNextCurrentItem()
 		{
-			if (Device != TestDevice.Android)
-			{
-				Assert.Ignore("For now, running this test only on Android.");
-			}
-			else
-			{
-				int indexToTest = 3;
-				var index = indexToTest.ToString();
-				var nextIndex = (indexToTest + 1).ToString();
+			int indexToTest = 3;
+			var index = indexToTest.ToString();
+			var nextIndex = (indexToTest + 1).ToString();
 
-				CheckLabelValue("lblPosition", index);
-				CheckLabelValue("lblCurrentItem", index);
+			CheckLabelValue("lblPosition", index);
+			CheckLabelValue("lblCurrentItem", index);
 
-				App.Click("btnNext");
-				CheckLabelValue("lblPosition", nextIndex);
-				CheckLabelValue("lblCurrentItem", nextIndex);
-				CheckLabelValue("lblSelected", nextIndex);
-				App.Click("btnPrev");
-			}
+			App.Click("btnNext");
+			CheckLabelValue("lblPosition", nextIndex);
+			CheckLabelValue("lblCurrentItem", nextIndex);
+			CheckLabelValue("lblSelected", nextIndex);
+			App.Click("btnPrev");
 		}
 
 		void CheckLabelValue(string labelAutomationId, string value)

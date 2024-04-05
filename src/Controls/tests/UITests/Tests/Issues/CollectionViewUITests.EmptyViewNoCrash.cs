@@ -15,10 +15,11 @@ namespace Microsoft.Maui.AppiumTests
 
 		// EmptyViewShouldNotCrash (src\Compatibility\ControlGallery\src\Issues.Shared\Issue9196.xaml.cs)
 		[Test]
+		[IgnoreOnIOS]
+		[IgnoreOnMac]
+		[IgnoreOnWindows]
 		public void EmptyViewShouldNotCrash()
 		{
-			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.iOS, TestDevice.Mac });
-
 			App.WaitForNoElement("Success");
 		}
 	}

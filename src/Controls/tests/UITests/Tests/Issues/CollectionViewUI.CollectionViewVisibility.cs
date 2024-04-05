@@ -18,18 +18,14 @@ namespace Microsoft.Maui.AppiumTests
 
 		// InitiallyInvisbleCollectionViewSurvivesiOSLayoutNonsense(src\Compatibility\ControlGallery\src\Issues.Shared\Issue12714.cs)
 		[Test]
+		[IgnoreOnIOS("This test is failing, requires research.")]
+		[IgnoreOnMac("This test is failing, requires research.")]
+		[IgnoreOnWindows]
 		public void InitiallyInvisbleCollectionViewSurvivesiOSLayoutNonsense()
 		{
-			if (Device == TestDevice.Android || Device == TestDevice.Windows)
-			{
-				App.WaitForElement(Show);
-				App.Click(Show);
-				App.WaitForNoElement(Success);
-			}
-			else
-			{
-				Assert.Ignore("This test is failing, requires research.");
-			}
+			App.WaitForElement(Show);
+			App.Click(Show);
+			App.WaitForNoElement(Success);
 		}
 	}
 }

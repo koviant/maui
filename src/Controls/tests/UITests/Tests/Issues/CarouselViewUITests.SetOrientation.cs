@@ -17,10 +17,10 @@ namespace Microsoft.Maui.AppiumTests.Issues
 
 		// Issue12193 (src\ControlGallery\src\Issues.Shared\Issue12193.cs
 		[Test]
+		[IgnoreOnMac]
+		[IgnoreOnWindows]
 		public async Task RotatingCarouselViewHTMLShouldNotDisappear()
 		{
-			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.Mac, TestDevice.Windows });
-
 			int delay = 3000;
 
 			App.SetOrientationPortrait();

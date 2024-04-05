@@ -21,31 +21,27 @@ namespace Microsoft.Maui.AppiumTests
 
 		// KeepScrollOffset (src\Compatibility\ControlGallery\src\Issues.Shared\CollectionViewItemsUpdatingScrollMode.cs)
 		[Test]
+		[IgnoreOnIOS]
+		[IgnoreOnMac]
 		public void KeepItemsInView()
 		{
-			if (Device == TestDevice.Android || Device == TestDevice.Windows)
+			App.WaitForElement("ScrollToMiddle");
+			App.Click("ScrollToMiddle");
+			App.WaitForNoElement("Vegetables.jpg, 10");
+
+			for (int n = 0; n < 25; n++)
 			{
-				App.WaitForElement("ScrollToMiddle");
-				App.Click("ScrollToMiddle");
-				App.WaitForNoElement("Vegetables.jpg, 10");
-
-				for (int n = 0; n < 25; n++)
-				{
-					App.Click("AddItemAbove");
-				}
-
-				App.WaitForNoElement("Vegetables.jpg, 10");
+				App.Click("AddItemAbove");
 			}
-			else
-				Assert.Ignore();
+
+			App.WaitForNoElement("Vegetables.jpg, 10");
 		}
 
 		// KeepScrollOffset (src\Compatibility\ControlGallery\src\Issues.Shared\CollectionViewItemsUpdatingScrollMode.cs)
 		[Test]
+		[IgnoreOnAllPlatforms]
 		public void KeepScrollOffset()
 		{
-			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.Android, TestDevice.iOS, TestDevice.Mac, TestDevice.Windows });
-
 			App.WaitForElement("SelectScrollMode");
 			App.Click("SelectScrollMode");
 			App.Click("KeepScrollOffset");
@@ -59,10 +55,9 @@ namespace Microsoft.Maui.AppiumTests
 
 		// KeepLastItemInView(src\Compatibility\ControlGallery\src\Issues.Shared\CollectionViewItemsUpdatingScrollMode.cs)
 		[Test]
+		[IgnoreOnAllPlatforms]
 		public void KeepLastItemInView()
 		{
-			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.Android, TestDevice.iOS, TestDevice.Mac, TestDevice.Windows });
-
 			App.WaitForElement("SelectScrollMode");
 			App.Click("SelectScrollMode");
 			App.Click("KeepLastItemInView");
