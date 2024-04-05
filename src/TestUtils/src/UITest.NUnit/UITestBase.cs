@@ -74,7 +74,7 @@ namespace UITest.Appium.NUnit
 			{
 				var testOutcome = TestContext.CurrentContext.Result.Outcome;
 				if (testOutcome == ResultState.Error ||
-				  testOutcome == ResultState.Failure)
+					testOutcome == ResultState.Failure)
 				{
 					SaveDeviceDiagnosticInfo();
 					SaveUIDiagnosticInfo();

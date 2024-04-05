@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -148,7 +148,8 @@ namespace Maui.Controls.Sample
 				var duplicates = new HashSet<string>();
 				_issues.ForEach(im =>
 				{
-					if (im.IssueTracker != IssueTracker.None && duplicates.Contains(im.Name, StringComparer.OrdinalIgnoreCase) && !IsExempt(im.Name))
+					if (im.IssueTracker != IssueTracker.None &&
+					duplicates.Contains(im.Name, StringComparer.OrdinalIgnoreCase) && !IsExempt(im.Name))
 					{
 						throw new NotSupportedException("Please provide unique tracker + issue number combo: "
 							+ im.IssueTracker.ToString() + im.IssueNumber.ToString() + im.IssueTestNumber.ToString());
