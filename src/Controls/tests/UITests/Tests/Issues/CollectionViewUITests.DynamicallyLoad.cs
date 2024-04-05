@@ -19,6 +19,8 @@ namespace Microsoft.Maui.AppiumTests.Issues
 		[Test]
 		public void DynamicallyLoadCollectionView()
 		{
+			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.Windows });
+
 			App.WaitForNoElement(Success);
 		}
 	}

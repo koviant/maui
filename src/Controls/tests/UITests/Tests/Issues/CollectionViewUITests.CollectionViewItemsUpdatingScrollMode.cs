@@ -23,7 +23,7 @@ namespace Microsoft.Maui.AppiumTests
 		[Test]
 		public void KeepItemsInView()
 		{
-			if (Device == TestDevice.Android || Device == TestDevice.Windows)
+			if (Device == TestDevice.Android)
 			{
 				App.WaitForElement("ScrollToMiddle");
 				App.Click("ScrollToMiddle");

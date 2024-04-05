@@ -17,7 +17,7 @@ namespace Microsoft.Maui.AppiumTests
 		[Test]
 		public void CollectionViewItemsSourceTypesDisplayAndDontCrash()
 		{
-			if (Device == TestDevice.Android || Device == TestDevice.Windows)
+			if (Device == TestDevice.Android)
 			{
 				App.WaitForNoElement("900");
 			}

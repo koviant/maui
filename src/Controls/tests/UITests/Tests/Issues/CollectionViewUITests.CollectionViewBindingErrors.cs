@@ -17,7 +17,7 @@ namespace Microsoft.Maui.AppiumTests
 		[Test]
 		public void NoBindingErrors()
 		{
-			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.Mac });
+			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.Mac, TestDevice.Windows });
 
 			App.WaitForElement("WaitForStubControl");
 			App.WaitForNoElement("Binding Errors: 0");

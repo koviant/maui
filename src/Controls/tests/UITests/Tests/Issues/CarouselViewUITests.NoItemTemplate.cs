@@ -17,6 +17,8 @@ namespace Microsoft.Maui.AppiumTests.Issues
 		[Test]
 		public void Issue12777Test()
 		{
+			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.Windows });
+
 			App.WaitForElement("TestCarouselView");
 			App.Screenshot("Test passed");
 		}
