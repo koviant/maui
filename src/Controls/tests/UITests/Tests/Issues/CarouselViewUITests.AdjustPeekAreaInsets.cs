@@ -16,6 +16,7 @@ namespace Microsoft.Maui.AppiumTests.Issues
 		// Issue13436 (src\ControlGallery\src\Issues.Shared\Issue13436.cs
 		/*
 		[Test]
+		[Category(UITestCategories.CarouselView)]
 		public void ChangePeekAreaInsetsInOnSizeAllocatedTest()
 		{
 			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.iOS, TestDevice.Mac, TestDevice.Windows },

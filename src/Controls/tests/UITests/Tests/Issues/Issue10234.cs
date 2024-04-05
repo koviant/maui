@@ -13,6 +13,7 @@ namespace Microsoft.Maui.AppiumTests.Issues
 		}
 
 		[Test]
+		[Category(UITestCategories.CarouselView)]
 		public void ScrollCarouselViewAfterDispose()
 		{
 			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.Android, TestDevice.Mac, TestDevice.Windows });
@@ -33,7 +34,8 @@ namespace Microsoft.Maui.AppiumTests.Issues
 				App.Click("goToBack");
 				App.WaitForElement("goToShow");
 			}
-			finally{
+			finally
+			{
 				Reset();
 			}
 		}
