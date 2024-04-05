@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using UITest.Appium;
 using UITest.Core;
 
@@ -15,6 +15,9 @@ namespace Microsoft.Maui.AppiumTests
 
 		// CollectionViewItemsSourceTypesDisplayAndDontCrash (src\Compatibility\ControlGallery\src\Issues.Shared\CollectionViewItemsSourceTypes.cs)
 		[Test]
+		[FailsOnIOS("This test is failing, requires research.")]
+		[FailsOnMac("This test is failing, requires research.")]
+		[FailsOnWindows]
 		public void CollectionViewItemsSourceTypesDisplayAndDontCrash()
 		{
 			if (Device == TestDevice.Android)

@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using UITest.Appium;
 using UITest.Core;
 
@@ -15,6 +15,9 @@ namespace Microsoft.Maui.AppiumTests
 
 		// EmptyViewShouldNotCrash (src\Compatibility\ControlGallery\src\Issues.Shared\Issue9196.xaml.cs)
 		[Test]
+		[FailsOnIOS]
+		[FailsOnMac]
+		[FailsOnWindows]
 		public void EmptyViewShouldNotCrash()
 		{
 			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.iOS, TestDevice.Mac, TestDevice.Windows });

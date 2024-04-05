@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using UITest.Appium;
 using UITest.Core;
 
@@ -15,6 +15,8 @@ namespace Microsoft.Maui.AppiumTests
 
 		// CollectionViewBindingErrorsShouldBeZero (src\Compatibility\ControlGallery\src\Issues.Shared\CollectionViewBindingErrors.xaml.cs)
 		[Test]
+		[FailsOnMac]
+		[FailsOnWindows]
 		public void NoBindingErrors()
 		{
 			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.Mac, TestDevice.Windows });

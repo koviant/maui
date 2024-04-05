@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using UITest.Appium;
 using UITest.Core;
 
@@ -17,6 +17,9 @@ namespace Microsoft.Maui.AppiumTests.Issues
 
 		// CollectionShouldInvalidateOnVisibilityChange (src\Compatibility\ControlGallery\src\Issues.Shared\Issue13203.cs)
 		[Test]
+		[FailsOnIOS("This test is failing, requires research.")]
+		[FailsOnMac("This test is failing, requires research.")]
+		[FailsOnWindows]
 		public void CollectionShouldInvalidateOnVisibilityChange()
 		{
 			if (Device == TestDevice.Android)

@@ -15,11 +15,11 @@ namespace Microsoft.Maui.AppiumTests.Issues
 
 		// Issue11224 (src\ControlGallery\src\Issues.Shared\Issue11224.cs
 		[Test]
+		[FailsOnIOS("Android specific Test")]
+		[FailsOnMac("Android specific Test")]
+		[FailsOnWindows("Android specific Test")]
 		public void CarouselViewPositionFromVisibilityChangeTest()
 		{
-			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.iOS, TestDevice.Mac, TestDevice.Windows },	
-				"Android specific Test");
-
 			App.WaitForElement("AppearButton");
 			App.Click("AppearButton");
 			App.WaitForNoElement("Item 4");
