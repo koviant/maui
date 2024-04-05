@@ -14,6 +14,7 @@ namespace Microsoft.Maui.AppiumTests.Issues
 		public override string Issue => "Group ListView Crashes when ItemSource is Cleared";
 
 		[Test]
+		[Category(UITestCategories.ListView)]
 		public void GroupListViewHeaderIndexOutOfRangeTest()
 		{
 			App.WaitForElement(ButtonId);

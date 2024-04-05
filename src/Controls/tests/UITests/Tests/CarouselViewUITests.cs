@@ -27,11 +27,11 @@ namespace Microsoft.Maui.AppiumTests
 
 		[Test]
 		[Category(UITestCategories.CarouselView)]
-		[FailsOnIOS("For now, running this test only on Android.")]
-		[FailsOnMac("For now, running this test only on Android.")]
-		[FailsOnWindows("For now, running this test only on Android.")]
 		public async Task CarouselViewSetPosition()
 		{
+			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.iOS, TestDevice.Mac, TestDevice.Windows },
+				"For now, running this test only on Android.");
+
 			App.WaitForElement("lblPosition");
 			await Task.Delay(1000);
 			var result = App.FindElement("lblPosition").GetText();
@@ -40,11 +40,11 @@ namespace Microsoft.Maui.AppiumTests
 
 		[Test]
 		[Category(UITestCategories.CarouselView)]
-		[FailsOnIOS("For now, running this test only on Android.")]
-		[FailsOnMac("For now, running this test only on Android.")]
-		[FailsOnWindows("For now, running this test only on Android.")]
 		public void CarouselViewGoToNextCurrentItem()
 		{
+			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.iOS, TestDevice.Mac, TestDevice.Windows },
+				"For now, running this test only on Android.");
+
 			int indexToTest = 3;
 			var index = indexToTest.ToString();
 			var nextIndex = (indexToTest + 1).ToString();

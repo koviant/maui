@@ -15,7 +15,7 @@ namespace Microsoft.Maui.AppiumTests.Issues
 
 		// Issue12777 (src\ControlGallery\src\Issues.Shared\Issue12777.cs
 		[Test]
-		[FailsOnWindows]
+		[Category(UITestCategories.CarouselView)]
 		public void Issue12777Test()
 		{
 			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.Windows });

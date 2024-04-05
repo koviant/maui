@@ -34,9 +34,12 @@ namespace Microsoft.Maui.AppiumTests
 		[TestCase("DataTemplate", "HorizontalListCode", 19, 6)]
 		[TestCase("DataTemplate", "VerticalGridCode", 19, 6)]
 		[TestCase("DataTemplate", "HorizontalGridCode", 19, 6)]
-		[FailsOnWindows("This test is failing, likely due to product issue")]
+		[Category(UITestCategories.CollectionView)]
 		public void VisitAndUpdateItemsSource(string collectionTestName, string subGallery, int firstItem, int lastItem)
 		{
+			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.Windows },
+				"This test is failing, likely due to product issue.");
+
 			VisitInitialGallery(collectionTestName);
 			VisitSubGallery(subGallery, !subGallery.Contains("Horizontal", StringComparison.OrdinalIgnoreCase), $"Item: {firstItem}", $"Item: {lastItem}", lastItem - 1, true, false);
 			this.Back();

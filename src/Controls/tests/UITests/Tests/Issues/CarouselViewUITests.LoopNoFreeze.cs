@@ -19,12 +19,15 @@ namespace Microsoft.Maui.AppiumTests.Issues
 
 		// Issue12574 (src\ControlGallery\src\Issues.Shared\Issue12574.cs
 		[Test]
-		[FailsOnAndroid("iOS specific Test")]
-		[FailsOnIOS("Currently fails on iOS; see https://github.com/dotnet/maui/issues/19488")]
-		[FailsOnMac("iOS specific Test")]
-		[FailsOnWindows("iOS specific Test")]
+		[Category(UITestCategories.CarouselView)]
 		public void Issue12574Test()
 		{
+			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.iOS },	
+				"Currently fails on iOS; see https://github.com/dotnet/maui/issues/19488");
+
+			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.Android, TestDevice.Mac, TestDevice.Windows },
+				"iOS specific Test");
+
 			App.WaitForNoElement("0 item");
 
 			var rect = App.FindElement(_carouselAutomationId).GetRect();

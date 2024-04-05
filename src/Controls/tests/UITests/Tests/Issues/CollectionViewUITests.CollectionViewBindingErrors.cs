@@ -15,8 +15,7 @@ namespace Microsoft.Maui.AppiumTests
 
 		// CollectionViewBindingErrorsShouldBeZero (src\Compatibility\ControlGallery\src\Issues.Shared\CollectionViewBindingErrors.xaml.cs)
 		[Test]
-		[FailsOnMac]
-		[FailsOnWindows]
+		[Category(UITestCategories.CollectionView)]
 		public void NoBindingErrors()
 		{
 			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.Mac, TestDevice.Windows });

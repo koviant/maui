@@ -18,9 +18,7 @@ namespace Microsoft.Maui.AppiumTests
 
 		// InitiallyInvisbleCollectionViewSurvivesiOSLayoutNonsense(src\Compatibility\ControlGallery\src\Issues.Shared\Issue12714.cs)
 		[Test]
-		[FailsOnIOS("This test is failing, requires research.")]
-		[FailsOnMac("This test is failing, requires research.")]
-		[FailsOnWindows]
+		[Category(UITestCategories.CollectionView)]
 		public void InitiallyInvisbleCollectionViewSurvivesiOSLayoutNonsense()
 		{
 			if (Device == TestDevice.Android)

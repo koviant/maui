@@ -15,11 +15,12 @@ namespace Microsoft.Maui.AppiumTests.Issues
 
 		// Issue12848 (src\ControlGallery\src\Issues.Shared\Issue12848.cs
 		[Test]
-		[FailsOnIOS("Android specific Test")]
-		[FailsOnMac("Android specific Test")]
-		[FailsOnWindows("Android specific Test")]
+		[Category(UITestCategories.CarouselView)]
 		public void Issue12848Test()
 		{
+			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.iOS, TestDevice.Mac, TestDevice.Windows },
+				"Android specific Test");
+
 			App.WaitForElement("TestCarouselView");
 			App.SwipeRightToLeft("TestCarouselView");
 			var position1 = App.FindElement("CarouselPosition").GetText();

@@ -17,7 +17,7 @@ namespace Microsoft.Maui.AppiumTests.Issues
 
 		// CollectionViewShouldSourceShouldUpdateWhileInvisible (src\Compatibility\ControlGallery\src\Issues.Shared\Issue13126.cs)
 		[Test]
-		[FailsOnWindows]
+		[Category(UITestCategories.CollectionView)]
 		public void DynamicallyLoadCollectionView()
 		{
 			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.Windows });

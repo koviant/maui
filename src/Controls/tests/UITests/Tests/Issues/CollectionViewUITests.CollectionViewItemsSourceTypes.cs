@@ -15,9 +15,7 @@ namespace Microsoft.Maui.AppiumTests
 
 		// CollectionViewItemsSourceTypesDisplayAndDontCrash (src\Compatibility\ControlGallery\src\Issues.Shared\CollectionViewItemsSourceTypes.cs)
 		[Test]
-		[FailsOnIOS("This test is failing, requires research.")]
-		[FailsOnMac("This test is failing, requires research.")]
-		[FailsOnWindows]
+		[Category(UITestCategories.CollectionView)]
 		public void CollectionViewItemsSourceTypesDisplayAndDontCrash()
 		{
 			if (Device == TestDevice.Android)
