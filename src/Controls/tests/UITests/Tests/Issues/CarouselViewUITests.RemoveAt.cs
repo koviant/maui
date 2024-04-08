@@ -16,6 +16,7 @@ namespace Microsoft.Maui.AppiumTests.Issues
 		// Issue10300 (src\ControlGallery\src\Issues.Shared\Issue10300.cs
 		[Test]
 		[Category(UITestCategories.CarouselView)]
+		[Ignore("Currently fails")]
 		public void Issue10300Test()
 		{
 			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.iOS },

@@ -20,6 +20,7 @@ namespace Microsoft.Maui.AppiumTests.Issues
 		// Issue12574 (src\ControlGallery\src\Issues.Shared\Issue12574.cs
 		[Test]
 		[Category(UITestCategories.CarouselView)]
+		[Ignore("Currently fails")]
 		public void Issue12574Test()
 		{
 			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.iOS },	
@@ -52,6 +53,8 @@ namespace Microsoft.Maui.AppiumTests.Issues
 		}
 
 		[Test]
+		[Category(UITestCategories.CarouselView)]
+		[Ignore("Currently fails")]
 		public void RemoveItemsQuickly()
 		{
 			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.iOS },

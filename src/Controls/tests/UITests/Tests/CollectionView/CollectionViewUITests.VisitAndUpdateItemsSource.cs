@@ -40,9 +40,15 @@ namespace Microsoft.Maui.AppiumTests
 			this.IgnoreIfPlatforms(new TestDevice[] { TestDevice.Windows },
 				"This test is failing, likely due to product issue.");
 
-			VisitInitialGallery(collectionTestName);
-			VisitSubGallery(subGallery, !subGallery.Contains("Horizontal", StringComparison.OrdinalIgnoreCase), $"Item: {firstItem}", $"Item: {lastItem}", lastItem - 1, true, false);
-			this.Back();
+			try
+			{
+				VisitInitialGallery(collectionTestName);
+				VisitSubGallery(subGallery, !subGallery.Contains("Horizontal", StringComparison.OrdinalIgnoreCase), $"Item: {firstItem}", $"Item: {lastItem}", lastItem - 1, true, false);
+			}
+			finally
+			{
+				this.Back();
+			}
 		}
 
 		void VisitSubGallery(string galleryName, bool scrollDown, string lastItem, string firstPageItem, int updateItemsCount, bool testItemSource, bool testAddRemove)
