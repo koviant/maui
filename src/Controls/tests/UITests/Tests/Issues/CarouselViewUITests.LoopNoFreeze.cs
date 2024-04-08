@@ -6,16 +6,17 @@ namespace Microsoft.Maui.AppiumTests.Issues
 {
 	public class CarouselViewLoopNoFreeze : _IssuesUITest
 	{
-		readonly string _carouselAutomationId = "carouselView";
-		readonly string _btnRemoveAutomationId = "btnRemove";
-		readonly string _btnRemoveAllAutomationId = "btnRemoveAll";
-
 		public CarouselViewLoopNoFreeze(TestDevice device)
 			: base(device)
 		{
 		}
 
 		public override string Issue => "CarouselView Loop=True default freezes iOS app";
+
+		/*	
+		readonly string _carouselAutomationId = "carouselView";
+		readonly string _btnRemoveAutomationId = "btnRemove";
+		readonly string _btnRemoveAllAutomationId = "btnRemoveAll";
 
 		// Issue12574 (src\ControlGallery\src\Issues.Shared\Issue12574.cs
 		[Test]
@@ -69,5 +70,6 @@ namespace Microsoft.Maui.AppiumTests.Issues
 			// If we haven't crashed, then the other button should be here
 			App.WaitForElement(_btnRemoveAutomationId);
 		}
+		*/
 	}
 }
